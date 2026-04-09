@@ -4,7 +4,7 @@ use anyhow::{Context, Result, bail};
 use std::path::Path;
 
 #[derive(Debug)]
-pub struct VrptwInstance {
+pub struct VrptwData {
     pub name: String,
     pub comment: Option<String>,
     pub max_quantity: u32,
@@ -32,7 +32,7 @@ pub struct Client {
     pub service_time: i64,
 }
 
-pub fn load(path: impl AsRef<Path>) -> Result<VrptwInstance> {
+pub fn load(path: impl AsRef<Path>) -> Result<VrptwData> {
     let raw = std::fs::read_to_string(path.as_ref())
         .with_context(|| format!("failed to read `{}`", path.as_ref().display()))?;
 
@@ -94,7 +94,7 @@ pub fn load(path: impl AsRef<Path>) -> Result<VrptwInstance> {
         );
     }
 
-    Ok(VrptwInstance {
+    Ok(VrptwData {
         name,
         comment,
         max_quantity,
