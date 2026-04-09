@@ -1,6 +1,7 @@
 use std::path::PathBuf;
 
 mod parser;
+mod vehicule;
 
 fn main() {
     println!("Hello, world!");
