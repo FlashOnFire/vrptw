@@ -1,4 +1,4 @@
-- [ ] import la data dans une super struct
+- [x] import la data dans une super struct
 - [ ] Generer/Ecrire tout le boilerplate les struct etc pour interagire avec
   - [ ] Faire un visualisateur des chemin
 - [ ] Créer un générateur aléatoir(con) de solutions
